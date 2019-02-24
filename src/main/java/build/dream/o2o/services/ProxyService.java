@@ -9,7 +9,6 @@ import build.dream.common.utils.SignatureUtils;
 import build.dream.o2o.constants.Constants;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.StringUtils;
-import org.apache.commons.collections.MapUtils;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
@@ -66,6 +65,8 @@ public class ProxyService {
             clientType = Constants.CLIENT_TYPE_POS;
         } else if (Constants.SERVICE_NAME_WEBAPI.equals(serviceName)) {
             clientType = Constants.CLIENT_TYPE_WEB;
+        } else if (Constants.SERVICE_NAME_O2OAPI.equals(serviceName)) {
+            clientType = Constants.CLIENT_TYPE_O2O;
         }
         return clientType;
     }

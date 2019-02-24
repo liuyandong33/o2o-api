@@ -1,13 +1,11 @@
 package build.dream.o2o.auth;
 
 import build.dream.common.catering.domains.Vip;
-import build.dream.common.saas.domains.SystemUser;
 import build.dream.common.saas.domains.Tenant;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
-import java.util.Map;
 
 public class VipUserDetails implements UserDetails {
     private Collection<GrantedAuthority> authorities;
@@ -15,6 +13,9 @@ public class VipUserDetails implements UserDetails {
     private String username;
     private Tenant tenant;
     private Vip vip;
+    private String publicKey;
+    private String privateKey;
+    private String clientType;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -77,5 +78,29 @@ public class VipUserDetails implements UserDetails {
 
     public void setVip(Vip vip) {
         this.vip = vip;
+    }
+
+    public String getPublicKey() {
+        return publicKey;
+    }
+
+    public void setPublicKey(String publicKey) {
+        this.publicKey = publicKey;
+    }
+
+    public String getPrivateKey() {
+        return privateKey;
+    }
+
+    public void setPrivateKey(String privateKey) {
+        this.privateKey = privateKey;
+    }
+
+    public String getClientType() {
+        return clientType;
+    }
+
+    public void setClientType(String clientType) {
+        this.clientType = clientType;
     }
 }
