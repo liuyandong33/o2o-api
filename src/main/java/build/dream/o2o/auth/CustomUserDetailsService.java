@@ -42,7 +42,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         vipUserDetails.setClientType(Constants.CLIENT_TYPE_O2O);
 
         Map<String, String> obtainVipInfoRequestParameters = new HashMap<String, String>();
-        obtainVipInfoRequestParameters.put("tenant_id", tenantId);
+        obtainVipInfoRequestParameters.put("tenantId", tenantId);
         obtainVipInfoRequestParameters.put("openId", username);
 
         String partitionCode = tenant.getPartitionCode();
