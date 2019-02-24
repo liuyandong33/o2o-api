@@ -1,6 +1,7 @@
 package build.dream.o2o.auth;
 
 import build.dream.common.api.ApiRest;
+import build.dream.common.auth.VipUserDetails;
 import build.dream.common.catering.domains.Vip;
 import build.dream.common.saas.domains.Tenant;
 import build.dream.common.saas.domains.TenantSecretKey;
